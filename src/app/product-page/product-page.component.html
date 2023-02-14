@@ -1,0 +1,26 @@
+<div class="p-5">
+  <div class="row">
+    <h1 class="heading">ALL PRODUCTS</h1>
+    <div class="col-3" *ngFor="let productitem of product.users">
+      <div class="listing-section">
+        <div class="product">
+          <div class="image-box">
+            <div class="images" id="image-1">
+              <img src="{{ productitem.thumbnail }}" />
+            </div>
+          </div>
+          <div class="text-box">
+            <h2 class="item">{{ productitem.title }}</h2>
+            <h3 class="price">{{ productitem.brand }}</h3>
+            <h3 class="price">{{ productitem.category }}</h3>
+            <h3 class="price">{{ productitem.price }}</h3>
+            <p class="description">{{ productitem.discountPercentage }}</p>
+            <p class="description">{{ productitem.description }}</p>
+
+            <button (click)="passData(productitem)">Add Item to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

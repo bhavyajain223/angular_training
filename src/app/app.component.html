@@ -1,0 +1,10 @@
+<div *ngIf="!productdetail; else singleProduct">
+  <app-product-page (productDetail)="assignData($event)"></app-product-page>
+</div>
+
+<ng-template #singleProduct>
+  <app-single-product
+    (removeDetail)="assignData($event)"
+    [productDetail]="productdetail"
+  ></app-single-product>
+</ng-template>

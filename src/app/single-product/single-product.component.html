@@ -1,0 +1,33 @@
+
+<div class="p-5">
+    <div class="row">
+        <div class="col-12 ps-0" *ngIf="productDetail">
+            <div class="listing-section">
+                <div class="product">
+                    <div class="image-box">
+                        <div class="images" id="image-1">
+                            <img src={{productDetail.thumbnail}} />
+                        </div>
+                    </div>
+                    <div class="text-box">
+                        <h2 class="item">{{productDetail.title}}</h2>
+                        <h3 class="price">{{productDetail.brand}}</h3>
+                        <h3 class="price">{{productDetail.category}}</h3>
+                        <h3 class="price">{{productDetail.price}}</h3>
+                        <p class="description">{{productDetail.discountPercentage}}</p>
+                        <p class="description">{{productDetail.description}}</p>
+                        <ul class="d-flex ps-0">
+                            <li class="" *ngFor="let productImages of productDetail.images">
+                                <img src={{productImages}}/>
+                            </li>
+                        </ul>
+                  
+                      
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-secondary " (click)="backProductPage()"> back </button>
+    </div>
+</div>

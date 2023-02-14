@@ -1,0 +1,41 @@
+<p>login works!</p>
+<h4 *ngIf="toggle">This is ngIf condtion</h4>
+<button (click)="toggleButton()">Toggle Button</button>
+
+<div class="container">
+{{value1}}
+</div>
+
+<div class="container">
+  <div class="row">
+    <input type="text" [value]="name" class="form-control"/>
+    <button (click)="submitbtn()" class="btn btn-success">Submit</button>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <input type="text" class="form-control" (keyup)="keyPress(name.value)" name="name" #name/>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    {{name1}}
+    <input type="text" class="form-control"  name="name"  [(ngModel)]="name1"/>
+  </div>
+</div>
+
+<div class="container">
+  <div class="col-12">
+    <input name="text" class="form-control"  [(ngModel)]="formDetail.name"/>
+  </div>
+  <div class="col-12">
+    <input email="text" class="form-control" [(ngModel)]="formDetail.email" />
+  </div>
+  <div class="col-12">
+    <input password="password" class="form-control"  [(ngModel)]="formDetail.password"/>
+  </div>
+  <div class="col-12">
+    <input mobile="number" class="form-control"  [(ngModel)]="formDetail.mobile"/>
+  </div>
+  <button (click)="formSubmit()">Submit</button>
+</div>
